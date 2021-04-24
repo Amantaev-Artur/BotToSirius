@@ -95,7 +95,7 @@ public class Bot extends TelegramLongPollingBot {
                         e.printStackTrace();
                     }
                     break;
-                default:
+                default: sendMsg(message, "Извините, но такая команда отсутствует");
             }
         }
     }
