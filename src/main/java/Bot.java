@@ -63,7 +63,7 @@ public class Bot extends TelegramLongPollingBot {
         if(message !=null && message.hasText()) {
             switch (message.getText()) {
                 case "/start":
-                    sendMsg(message, "Добро пожаловать. Вас приветствует чат бот экскурсовод");
+                    sendMsg(message, "Добро пожаловать. Вас приветствует бот-экскурсовод");
                     break;
                 case "Покажи карту ФТ Сириус":
                     sendPhotoMsg(message, "Map");
