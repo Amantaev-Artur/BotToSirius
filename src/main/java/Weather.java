@@ -5,7 +5,6 @@ import com.vdurmont.emoji.EmojiParser;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Scanner;
 
@@ -31,8 +30,10 @@ public class Weather {
             JSONObject obj = getArray.getJSONObject(i);
             model.setMain((String) obj.get("main"));
         }
+
         String weather = "";
         String icon_weather = "";
+
         switch (model.getMain()) {
             case "Clouds": weather = "Облачно"; icon_weather = ":cloud:"; break;
             case "Clear": weather = "Ясно"; icon_weather = ":sunny:"; break;
@@ -41,8 +42,8 @@ public class Weather {
         }
 
         return "Погода в Адлере" + "\n" +
-                "Температура: " + model.getTemp() + "C" + "\n" +
-                "Влажность:" + model.getHumidity() + "%" + "\n" +
+                EmojiParser.parseToUnicode(":thermometer:") + " Температура: " + model.getTemp() + "°C" + "\n" +
+                EmojiParser.parseToUnicode(":droplet:") + " Влажность: " + model.getHumidity() + "%" + "\n" +
                 EmojiParser.parseToUnicode(icon_weather) + " " + weather;
     }
 }
