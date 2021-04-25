@@ -2,7 +2,6 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 import com.vdurmont.emoji.EmojiParser;
-import org.telegram.telegrambots.meta.api.objects.Message;
 
 import java.io.IOException;
 import java.io.InputStream;
