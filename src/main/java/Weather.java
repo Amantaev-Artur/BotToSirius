@@ -2,6 +2,7 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 import com.vdurmont.emoji.EmojiParser;
+import org.telegram.telegrambots.meta.api.objects.Message;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -10,8 +11,8 @@ import java.util.Scanner;
 
 public class Weather {
 
-    public static String getWeather(String message, Model model) throws IOException {
-        URL url = new URL("http://api.openweathermap.org/data/2.5/weather?q=" + message + "&units=metric&appid=6fff53a641b9b9a799cfd6b079f5cd4e");
+    public static String getWeather(Model model) throws IOException {
+        URL url = new URL("http://api.openweathermap.org/data/2.5/weather?q=Adler&units=metric&appid=6fff53a641b9b9a799cfd6b079f5cd4e");
 
         Scanner in = new Scanner((InputStream) url.getContent());
         String result = "";

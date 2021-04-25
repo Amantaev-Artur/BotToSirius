@@ -88,7 +88,7 @@ public class Bot extends TelegramLongPollingBot {
                     break;
                 case "Узнать погоду в Сириусе":
                     try {
-                        sendMsg(message, Weather.getWeather("Адлер", model));
+                        sendMsg(message, Weather.getWeather( model));
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
